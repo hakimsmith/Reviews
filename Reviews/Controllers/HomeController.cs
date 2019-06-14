@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Reviews.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,9 @@ namespace Reviews.Controllers
     {
         public ViewResult Index()
         {
-            return View();
+            ReviewRepository revrepos = new ReviewRepository();
+            var model = revrepos.GetAll();
+            return View(model);
         }
     }
 }
