@@ -15,5 +15,16 @@ namespace Reviews.Model
 
         HorrorReviews horrorReview4 = new HorrorReviews(444, "The Thing", "/Images/TheThing.jpg/", "1982 science fiction horror film directed by John Carpenter.", "Horror", "Definitely a movie for animal lovers. Teaches you to trust the people around you, don't be a cynic. Hands down, the greatest horror movie ever made.");
 
+
+        public Dictionary<int, HorrorReviews> movies { get; set; }
+        public ReviewRepository()
+        {
+            movies = new Dictionary<int, HorrorReviews>();
+            movies.Add(111, horrorReview1);
+            movies.Add(222, horrorReview2);
+            movies.Add(333, horrorReview3);
+            movies.Add(444, horrorReview4);
+        }
+
     }
 }
