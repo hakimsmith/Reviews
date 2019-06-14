@@ -1,11 +1,12 @@
-﻿using System;
+﻿using Reviews.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Reviews.Model
+namespace Reviews.Repositories
 {
-    public class ReviewRepository
+    public class ReviewRepository : IRepository<HorrorReviews>
     {
         HorrorReviews horrorReview1 = new HorrorReviews(111, "BlairWitchProject", "/wwwroot/Images/BlairWitch.jpg/", "1999 American supernatural horror film written, directed and edited by Daniel Myrick Eduardo Sanchez.", "Horror", "This is a great family movie, recommend you bring the kids, especially the young ones! Full of laughs, and life lessons, too. As soon as we got out of the theatre, my six year old wanted to see it again!");
 
@@ -16,15 +17,27 @@ namespace Reviews.Model
         HorrorReviews horrorReview4 = new HorrorReviews(444, "The Thing", "/Images/TheThing.jpg/", "1982 science fiction horror film directed by John Carpenter.", "Horror", "Definitely a movie for animal lovers. Teaches you to trust the people around you, don't be a cynic. Hands down, the greatest horror movie ever made.");
 
 
-        public Dictionary<int, HorrorReviews> movies { get; set; }
+        public List<HorrorReviews> movies { get; set; }
         public ReviewRepository()
         {
-            movies = new Dictionary<int, HorrorReviews>();
-            movies.Add(111, horrorReview1);
-            movies.Add(222, horrorReview2);
-            movies.Add(333, horrorReview3);
-            movies.Add(444, horrorReview4);
+            movies = new List<HorrorReviews>();
+            movies.Add(horrorReview1);
+            movies.Add(horrorReview2);
+            movies.Add(horrorReview3);
+            movies.Add(horrorReview4);
         }
 
+        public IEnumerable<HorrorReviews> GetAll()
+        {
+            return movies;
+        }
+
+        public HorrorReviews GetById(int id)
+        {
+            return movies.Single(c => c.MovieId == id);
+        }
+
+        
+        
     }
 }
