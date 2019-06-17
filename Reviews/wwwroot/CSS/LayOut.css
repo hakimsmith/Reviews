@@ -15,6 +15,13 @@ h1 {
     padding: 3rem 0 0 0;
     color: white;
     margin-bottom: 100px;
+    font-family: 'Condiment', cursive;
+}
+
+h3 {
+    font-family: 'Playfair Display SC', serif;
+    color: white;
+    font-size: 20pt;
 }
 
 main a {
@@ -27,6 +34,10 @@ main a {
     flex-wrap: wrap;
     margin: auto;
     color: white;
+}
+
+p {
+    font-family: 'Quicksand', sans-serif;
 }
 
 img {
