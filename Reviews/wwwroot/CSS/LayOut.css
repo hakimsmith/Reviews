@@ -1,0 +1,49 @@
+﻿* {
+    line-height: 1.618em;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #111;
+}
+
+h1 {
+    text-shadow: 2px 2px 3px black;
+    line-height: 1.2em;
+    text-align: center;
+    font-size: 5rem;
+    font-weight: bold;
+    padding: 3rem 0 0 0;
+    color: white;
+    margin-bottom: 100px;
+}
+
+main a {
+    font-size: 2em;
+    padding: .5em 2em;
+    text-decoration: none;
+    display: inline-grid;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: auto;
+    color: white;
+}
+
+img {
+    width: 150px;
+    height: 250px;
+}
+
+footer {
+    background: rgba(111, 221, 126, 0);
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+
