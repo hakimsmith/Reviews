@@ -18,7 +18,7 @@ namespace Reviews.Controllers
         public ViewResult Single()
         {
             ReviewRepository revrepos = new ReviewRepository();
-            var model = revrepos.GetById(111);
+            var model = revrepos.GetById(revrepos.movies[0].MovieId);
             return View(model);
         }
 

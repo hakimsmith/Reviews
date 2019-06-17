@@ -19,7 +19,7 @@
         @foreach(var item in Model)
         {
         <p>Title: <span>@item.Title</span></p>
-        <a href="/@item.MovieId">
+        <a href="Review/Single/@item.MovieId">
             <img src="~/Images/@item.ImageUrl" alt="Alternate Text" />
             <p>@item.Title</p>
         </a>
