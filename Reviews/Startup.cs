@@ -32,7 +32,7 @@ namespace Reviews
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Review}/{action=Index}/{id?}");
             });
         }
     }
