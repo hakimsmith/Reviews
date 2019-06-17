@@ -3,6 +3,7 @@
 @{
     Layout = null;
 }
+<link rel="stylesheet" type="text/css" href="~/CSS/LayOut.css">
 
 <!DOCTYPE html>
 
@@ -13,16 +14,15 @@
 </head>
 <body>
     <nav>
-        <h1> Web Name</h1>
+        <h1> Horrific Reviews</h1>
     </nav>
     <main>
-        @foreach(var item in Model)
+        @foreach (var item in Model)
         {
-        <p>Title: <span>@item.Title</span></p>
-        <a href="/@item.MovieId">
-            <img src="~/Images/@item.ImageUrl" alt="Alternate Text" />
-            <p>@item.Title</p>
-        </a>
+            <a href="Review/Single/@item.MovieId">
+                <img src="~/Images/@item.ImageUrl" alt="Alternate Text" />
+                <p>@item.Title</p>
+            </a>
         }
     </main>
     <footer> Copyright 2019</footer>

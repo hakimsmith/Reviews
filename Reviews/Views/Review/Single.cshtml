@@ -4,6 +4,8 @@
     Layout = null;
 }
 
+<link rel="stylesheet" type="text/css" href="~/CSS/LayOut.css">
+
 <!DOCTYPE html>
 
 <html>
@@ -13,17 +15,14 @@
 </head>
 <body>
     <nav>
-        <h1> Web Name</h1>
+        <h1>Horrific Reviews</h1>
     </nav>
     <main>
 
-
-            <p>
-            @Model.Title
-            @Model.ImageUrl
-            @Model.Description
-            @Model.Content
-             </p>
+        <img src="~/Images/@Model.ImageUrl" alt="Alternate Text" />
+        <p>@Model.Title</p>
+        <p>@Model.Description</p>
+        <p>@Model.Content</p>
 
     </main>
     <footer> Copyright 2019</footer>
