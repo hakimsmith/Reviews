@@ -15,10 +15,10 @@ namespace Reviews.Controllers
             var model = revrepos.GetAll();
             return View(model);
         }
-        public ViewResult Single()
+        public ActionResult Single(int id)
         {
             ReviewRepository revrepos = new ReviewRepository();
-            var model = revrepos.GetById(revrepos.movies[0].MovieId);
+            var model = revrepos.GetById(id);
             return View(model);
         }
 
