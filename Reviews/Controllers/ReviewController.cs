@@ -15,11 +15,14 @@ namespace Reviews.Controllers
             var model = revrepos.GetAll();
             return View(model);
         }
+<<<<<<< HEAD
         public ViewResult Single()
         {
             ReviewRepository revrepos = new ReviewRepository();
             var model = revrepos.GetById(111);
             return View(model);
         }
+=======
+>>>>>>> html
     }
 }

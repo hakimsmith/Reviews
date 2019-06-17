@@ -18,7 +18,14 @@
     <main>
         @foreach(var item in Model)
         {
+<<<<<<< HEAD
         <p>Title: <span>@item.Title</span></p>
+=======
+        <a href="/@item.MovieId">
+            <img src="~/Images/@item.ImageUrl" alt="Alternate Text" />
+            <p>@item.Title</p>
+        </a>
+>>>>>>> html
         }
     </main>
     <footer> Copyright 2019</footer>
