@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Reviews.Model.HorrorReviews>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <nav>
+        <h1> Web Name</h1>
+    </nav>
+    <main>
+        @foreach(var item in Model)
+        {
+        <a href="/@item.MovieId">
+            <img src="~/Images/@item.ImageUrl" alt="Alternate Text" />
+            <p>@item.Title</p>
+        </a>
+        }
+    </main>
+    <footer> Copyright 2019</footer>
+    <nav></nav>
+</body>
+</html>
