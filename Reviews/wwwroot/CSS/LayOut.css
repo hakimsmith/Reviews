@@ -21,13 +21,14 @@ h1 {
 h3 {
     font-family: 'Playfair Display SC', serif;
     color: white;
+    color: white;
     font-size: 20pt;
 }
 
 main a {
     font-size: 2em;
     padding: .5em 2em;
-    text-decoration: none;
+    text-decoration:   none;
     display: inline-grid;
     justify-content: center;
     align-items: center;
