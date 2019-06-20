@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Reviews.Controllers
 {
-    public class ReviewController : Controller
+    public class MovieController : Controller
     {
         public ViewResult Index()
         {

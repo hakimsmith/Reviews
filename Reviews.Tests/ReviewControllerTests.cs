@@ -11,7 +11,7 @@ namespace Reviews.Tests
             [Fact]
             public void Index_Returns_View()
             {
-                    var underTest = new ReviewController();
+                    var underTest = new MovieController();
 
                     var result = underTest.Index();
 

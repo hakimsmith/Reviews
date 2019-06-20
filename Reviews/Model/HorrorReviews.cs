@@ -15,7 +15,9 @@ namespace Reviews.Model
 
         public string Content { get; set; }
 
-        public Movie Movie { get; set; }
+        public int MovieId { get; set; }
+
+        public Movie ReviewMovie { get; set; }
 
         public HorrorReviews(int horrorReviewsId, string content)
         {
