@@ -42,7 +42,7 @@ namespace Reviews.Repositories
 
         public HorrorReviews GetById(int id)
         {
-            return movies.Single(c => c.MovieId == id);
+            return movies.Single(c => c.HorrorReviewsId == id);
         }
 
         

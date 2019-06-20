@@ -18,15 +18,15 @@ namespace Reviews.Tests
                     Assert.IsType<ViewResult>(result);
             }
 
-            [Fact]
-            public void Single_Returns_A_View()
-            {
-                    var underTest = new ReviewController();
+            //[Fact]
+            //public void Single_Returns_A_View()
+            //{
+            //        var underTest = new ReviewController();
 
-                    var result = underTest.Single();
+            //        var result = underTest.Single();
 
-                    Assert.IsType<ViewResult>(result);
-             }
+            //        Assert.IsType<ViewResult>(result);
+            // }
         }
     
 }

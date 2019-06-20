@@ -12,6 +12,7 @@ namespace Reviews.Model
         [Key]
 
         public int HorrorReviewsId { get; set; }
+
         public string Content { get; set; }
 
         public Movie Movie { get; set; }
@@ -22,6 +23,10 @@ namespace Reviews.Model
             Content = content;
         }
 
+        public HorrorReviews()
+        {
+
+        }
        
     }
 

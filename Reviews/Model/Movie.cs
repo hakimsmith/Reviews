@@ -14,7 +14,7 @@ namespace Reviews.Model
 
         public int CategoryId { get; set; }
 
-        public List<Movie> Movies { get; set; }
+        public List<HorrorReviews> Reviews { get; set; }
 
 
 
@@ -24,6 +24,11 @@ namespace Reviews.Model
             Title = title;
             ImageUrl = imageUrl;
             Description = description;           
+        }
+
+        public Movie()
+        {
+
         }
     }
 }
