@@ -10,8 +10,8 @@ namespace Reviews
     public class SiteContext : DbContext
     {
         public DbSet<Movie> Movies { get; set; }
-        public DbSet<HorrorReviews> HorrorReviews { get; set; }
-        public DbSet<Category> Categories { get; set; }
+        public DbSet<Review> HorrorReviews { get; set; }
+        public DbSet<Genre> Categories { get; set; }
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -90,11 +90,11 @@ namespace Reviews
                 }
             );
 
-            modelBuilder.Entity<HorrorReviews>().HasData(
+            modelBuilder.Entity<Review>().HasData(
 
-        new HorrorReviews { HorrorReviewsId = 1,  MovieId = 1 , Content= "This is a great family movie, recommend you bring the kids, especially the young ones!Full of laughs, and life lessons too. As soon as we got out of the theatre, my six year old wanted to see it again!" },
+        new Review { HorrorReviewsId = 1,  MovieId = 1 , Content= "This is a great family movie, recommend you bring the kids, especially the young ones!Full of laughs, and life lessons too. As soon as we got out of the theatre, my six year old wanted to see it again!" },
 
-        new HorrorReviews { HorrorReviewsId = 2, MovieId = 1, Content = "King Lear" }
+        new Review { HorrorReviewsId = 2, MovieId = 1, Content = "King Lear" }
 
         // new HorrorReviews { HorrorReviewsId = 2, MovieId = 2, Content = "Othello" }
 

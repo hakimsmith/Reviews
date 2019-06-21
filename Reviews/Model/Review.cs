@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Reviews.Model
 {
-    public class HorrorReviews
+    public class Review
     {
          
         [Key]
 
-        public int HorrorReviewsId { get; set; }
+        public int ReviewId { get; set; }
 
         public string Content { get; set; }
 
@@ -19,13 +19,13 @@ namespace Reviews.Model
 
         public Movie ReviewMovie { get; set; }
 
-        public HorrorReviews(int horrorReviewsId, string content)
+        public Review(int reviewId, string content)
         {
-            HorrorReviewsId = horrorReviewsId;
+            ReviewId = reviewId;
             Content = content;
         }
 
-        public HorrorReviews()
+        public Review()
         {
 
         }

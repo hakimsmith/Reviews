@@ -5,11 +5,11 @@ using System.Threading.Tasks;
 
 namespace Reviews.Model
 {
-    public class Category
+    public class Genre
     {
-        public int CategoryId { get; set; }
+        public int GenreId { get; set; }
 
-        public string CategoryName { get; set; }
+        public string GenreName { get; set; }
 
         public List<Movie> Movies { get; set; }
     }
