@@ -12,7 +12,7 @@ namespace Reviews.Model
         public string ImageUrl { get; set; }
         public string Description { get; set; }
 
-        public Genre Category { get; set; }
+        public Genre Genre { get; set; }
 
 
         public List<Review> Reviews { get; set; }

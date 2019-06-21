@@ -92,9 +92,9 @@ namespace Reviews
 
             modelBuilder.Entity<Review>().HasData(
 
-        new Review { HorrorReviewsId = 1,  MovieId = 1 , Content= "This is a great family movie, recommend you bring the kids, especially the young ones!Full of laughs, and life lessons too. As soon as we got out of the theatre, my six year old wanted to see it again!" },
+        new Review { ReviewId = 1,  MovieId = 1 , Content= "This is a great family movie, recommend you bring the kids, especially the young ones!Full of laughs, and life lessons too. As soon as we got out of the theatre, my six year old wanted to see it again!" },
 
-        new Review { HorrorReviewsId = 2, MovieId = 1, Content = "King Lear" }
+        new Review { ReviewId = 2, MovieId = 1, Content = "King Lear" }
 
         // new HorrorReviews { HorrorReviewsId = 2, MovieId = 2, Content = "Othello" }
 
