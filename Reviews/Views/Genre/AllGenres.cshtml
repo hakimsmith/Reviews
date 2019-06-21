@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Reviews.Model.Genre>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AllGenres</title>
+</head>
+<body>
+    <h1>Horrific Genres</h1>
+    <main>
+        @foreach (var item in Model)
+        {
+            <a href="Movie/SingleMovie/@item.GenreId">
+                @*<img src="~/Images/@item.ImageUrl" alt="Alternate Text" />*@
+                <h3>@item.GenreName</h3>
+            </a>
+        }
+    </main>
+    <footer> Copyright 2019</footer>
+</body>
+</html>

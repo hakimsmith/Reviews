@@ -1,4 +1,4 @@
-﻿
+﻿@model Reviews.Model.Genre
 @{
     Layout = null;
 }
@@ -11,5 +11,12 @@
     <title>SingleGenre</title>
 </head>
 <body>
+    <main>
+        @*<img src="~/Images/@Model.ImageUrl" alt="Alternate Text" />*@
+        <h3>@Model.GenreId</h3>
+        <p>@Model.GenreName</p><br />
+        @*<p>@Model.RevRepo.GetById(Model.MovieId)</p>*@
+    </main>
+    <footer> Copyright 2019</footer>
 </body>
 </html>
