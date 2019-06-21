@@ -29,5 +29,11 @@ namespace Reviews.Controllers
             var model = revrepos.GetById(id);
             return View(model);
         }
+
+        public IActionResult OnGetPartial() =>new PartialViewResult
+        {
+            ViewName = "SingleMovieReviews",
+            ViewData = ViewData,
+        };
     }
 }
