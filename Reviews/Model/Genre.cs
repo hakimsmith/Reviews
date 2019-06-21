@@ -11,7 +11,10 @@ namespace Reviews.Model
 
         public string GenreName { get; set; }
 
-        //public List<Movie> Movies { get; set; }
+        public Genre()
+        {
+
+        }
         
 
         public Genre(int genreId, string genreName)

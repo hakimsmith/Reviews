@@ -9,14 +9,20 @@ namespace Reviews.Repositories
     public class GenreRepository : IRepository<Genre>
     {
         private SiteContext db;
+
+        public GenreRepository(SiteContext db)
+        {
+            this.db = db;
+        }
+
         public IEnumerable<Genre> GetAll()
         {
-            throw new NotImplementedException();
+            return db.Genres;
         }
 
         public Genre GetById(int id)
         {
-            throw new NotImplementedException();
+            return db.Genres.Single(c => c.GenreId == id);
         }
     }
 }
