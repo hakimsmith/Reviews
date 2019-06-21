@@ -16,12 +16,12 @@ namespace Reviews.Controllers
             this.movierepos = movierepos;           
         }
 
-        public ViewResult Index()
+        public ViewResult AllMovies()
         {
             var model = movierepos.GetAll();
             return View(model);
         }
-        public ActionResult Single(int id)
+        public ActionResult SingleMovie(int id)
         {
             var model = movierepos.GetById(id);
             return View(model);

@@ -36,7 +36,7 @@ namespace Reviews
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Movie}/{action=Index}/{id?}");
+                    template: "{controller=Movie}/{action=AllMovies}/{id?}");
             });
         }
     }

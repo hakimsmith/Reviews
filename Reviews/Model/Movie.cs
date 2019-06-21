@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Reviews.Repositories;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,6 +17,7 @@ namespace Reviews.Model
 
         public Genre Genre { get; set; }
 
+        //public ReviewRepository RevRepo { get; set; }
 
         public List<Review> Reviews { get; set; }
 

@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Reviews.Model;
 using Reviews.Repositories;
 using System;
 using System.Collections.Generic;
@@ -7,16 +8,26 @@ using System.Threading.Tasks;
 
 namespace Reviews.Controllers 
 {
-    public class ReviewController
+    public class ReviewController : Controller
     {
-        public SiteContext Db = new SiteContext();
+        IRepository<Review> revrepos;
+        public ReviewController(IRepository<Review> revrepos)
+        {
+            this.revrepos = revrepos;
+        }
 
-            
-        
-            public ViewResult GetById(int id)
-            {
-                return Db.(c => c.HorrorReviewsId == id);
-            }
-        
+        public ViewResult Index()
+        {
+            var model = revrepos.GetAll();
+            return View(model);
+        }
+
+
+
+        public ActionResult SingleReview(int id)
+        {
+            var model = revrepos.GetById(id);
+            return View(model);
+        }
     }
 }
