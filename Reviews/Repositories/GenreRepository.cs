@@ -8,6 +8,7 @@ namespace Reviews.Repositories
 {
     public class GenreRepository : IRepository<Genre>
     {
+        private SiteContext db;
         public IEnumerable<Genre> GetAll()
         {
             throw new NotImplementedException();
