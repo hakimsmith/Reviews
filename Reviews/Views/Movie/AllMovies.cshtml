@@ -21,13 +21,18 @@
     <main>
         @foreach (var item in Model)
         {
-                       
-                        <a href="Movie/SingleMovie/@item.MovieId">
+
+            <a href="Movie/SingleMovie/@item.MovieId">
                 <img src="~/Images/@item.ImageUrl" alt="Alternate Text" />
                 <h3>@item.Title</h3>
             </a>
         }
     </main>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#movies">Movies</a>
+        <a href="#reviews">Reviews</a>
+    </nav>
     <footer> Copyright 2019</footer>
     <nav></nav>
 </body>

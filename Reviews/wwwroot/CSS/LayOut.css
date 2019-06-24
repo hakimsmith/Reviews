@@ -60,3 +60,21 @@ footer {
 p {
     color: white;
 }
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    background: #666;
+   
+}
+
+nav a {
+        padding: .5em 2em;
+        color: #444;
+
+}
