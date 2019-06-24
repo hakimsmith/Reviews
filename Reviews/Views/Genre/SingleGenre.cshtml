@@ -18,7 +18,7 @@
         @foreach (var item in Model.Movies)
         {
 
-            <a href="Movie/SingleMovie/@item.MovieId">
+            <a href="/Movie/SingleMovie/@item.MovieId">
                 <img src="~/Images/@item.ImageUrl" alt="Alternate Text" />
                 <h3>@item.Title</h3>
             </a>
