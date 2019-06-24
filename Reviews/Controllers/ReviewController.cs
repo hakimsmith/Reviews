@@ -35,5 +35,18 @@ namespace Reviews.Controllers
             ViewName = "SingleMovieReviews",
             ViewData = ViewData,
         };
+
+        [HttpGet]
+        public ViewResult CreateReview()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult CreateReview(Review review)
+        {
+            revrepos.Create(review);
+            return RedirectToAction("AllMovies", "Movie");
+        }
     }
 }

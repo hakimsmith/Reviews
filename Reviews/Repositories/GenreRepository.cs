@@ -15,6 +15,11 @@ namespace Reviews.Repositories
             this.db = db;
         }
 
+        public void Create(Genre obj)
+        {
+            throw new NotImplementedException();
+        }
+
         public IEnumerable<Genre> GetAll()
         {
             return db.Genres;
@@ -24,5 +29,7 @@ namespace Reviews.Repositories
         {
             return db.Genres.Single(c => c.GenreId == id);
         }
+
+        
     }
 }

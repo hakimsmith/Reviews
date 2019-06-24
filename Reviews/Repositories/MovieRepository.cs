@@ -14,6 +14,12 @@ namespace Reviews.Repositories
         {
             this.db = db;
         }
+
+        public void Create(Movie obj)
+        {
+            throw new NotImplementedException();
+        }
+
         public IEnumerable<Movie> GetAll()
         {
             return db.Movies;
