@@ -24,7 +24,13 @@
         <img src="~/Images/@Model.ImageUrl" alt="Alternate Text" />
         <h3>@Model.Title</h3>
         <p>@Model.Description</p><br />
-        @*<p>@Model.RevRepo.GetById(Model.MovieId)</p>*@
+        @foreach (var review in Model.Reviews)
+        {
+            if (review.MovieId == Model.MovieId)
+            {
+                <p>@review.Content</p>
+            }
+        }
 
     </main>
     <footer> Copyright 2019</footer>
