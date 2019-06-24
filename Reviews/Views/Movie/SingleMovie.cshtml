@@ -16,12 +16,10 @@
     <title>Single</title>
 </head>
 <body>
-    <nav>
-        <h1>Horrific Reviews</h1>
-    </nav>
+    
     <main>
-
-        <img src="~/Images/@Model.ImageUrl" alt="Alternate Text" />
+        
+        <img src="~/Images/@Model.ImageUrl" alt="Alternate Text" /><br/>
         <h3>@Model.Title</h3>
         <p>@Model.Description</p><br />
         @foreach (var review in Model.Reviews)
@@ -31,7 +29,7 @@
                 <p>@review.Content</p>
             }
         }
-
+           
     </main>
     <nav>
         <a href="/">Home</a>

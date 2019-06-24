@@ -47,7 +47,7 @@ namespace Reviews
                     MovieId = 3,
                     GenreId = 2,
                     Title = "Saw",
-                    ImageUrl = "Saw.jpg",
+                    ImageUrl = "SawOne.jpg",
                     Description = "2004 American psychological horror-thriller filmed and directed by James Wan."
                 },
                 new Movie
