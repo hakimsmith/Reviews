@@ -19,7 +19,9 @@ namespace Reviews
         {
             services.AddMvc();
             services.AddDbContext<SiteContext>();
+            services.AddScoped<IRepository<Genre>, GenreRepository>();
             services.AddScoped<IRepository<Movie>, MovieRepository>();
+            services.AddScoped<IRepository<Review>, ReviewRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -36,7 +38,7 @@ namespace Reviews
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Movie}/{action=AllMovies}/{id?}");
+                    template: "{controller=Genre}/{action=AllGenres}/{id?}");
             });
         }
     }

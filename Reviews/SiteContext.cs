@@ -18,7 +18,8 @@ namespace Reviews
         {
             var connectionString = "Server=(localdb)\\mssqllocaldb;Database=SiteDb;Trusted_Connection=True;";
 
-            optionsBuilder.UseSqlServer(connectionString);
+            optionsBuilder.UseSqlServer(connectionString)
+                   .UseLazyLoadingProxies();
 
             base.OnConfiguring(optionsBuilder);
         }

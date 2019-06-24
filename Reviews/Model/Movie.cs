@@ -15,11 +15,11 @@ namespace Reviews.Model
         public string Description { get; set; }
         
 
-        public Genre Genre { get; set; }
+        public virtual Genre Genre { get; set; }
 
         //public ReviewRepository RevRepo { get; set; }
 
-        public List<Review> Reviews { get; set; }
+        public virtual List<Review> Reviews { get; set; }
 
 
 

@@ -17,7 +17,7 @@ namespace Reviews.Model
 
         public int MovieId { get; set; }
 
-        public Movie ReviewMovie { get; set; }
+        public virtual Movie ReviewMovie { get; set; }
 
         public Review(int reviewId, string content)
         {

@@ -21,7 +21,7 @@ namespace Reviews.Controllers
             var model = genrerepos.GetAll();
             return View(model);
         }
-        public ActionResult SingleGenres(int id)
+        public ActionResult SingleGenre(int id)
         {
             var model = genrerepos.GetById(id);
             return View(model);
