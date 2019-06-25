@@ -24,12 +24,12 @@
         <p>@Model.Description</p><br />
         @foreach (var review in Model.Reviews)
         {
-            if (review.MovieId == Model.MovieId)
-            {
-                <p>@review.Content</p>
-            }
+            
+            <p>@review.Content</p>
+            <br />
+            
         }
-        <a href="/Review/CreateReview">Create Review</a>
+        <a href="/Review/CreateReview/@Model.MovieId">Create Review</a>
     </main>
     
     <nav>

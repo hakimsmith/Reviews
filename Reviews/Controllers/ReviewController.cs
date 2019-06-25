@@ -37,8 +37,9 @@ namespace Reviews.Controllers
         };
 
         [HttpGet]
-        public ViewResult CreateReview()
+        public ViewResult CreateReview(int id)
         {
+            ViewBag.MovieId = id;
             return View();
         }
 
