@@ -11,7 +11,7 @@ namespace Reviews.Model
         public virtual List<Movie> Movies { get; set; }
 
         public int GenreId { get; set; }
-
+        public string ImageUrl { get; set; }
         public string GenreName { get; set; }
 
         public Genre()

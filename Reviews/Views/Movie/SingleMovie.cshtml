@@ -1,7 +1,7 @@
 ﻿@model Reviews.Model.Movie
 
 @{
-    Layout = null;
+    Layout = "/Views/Shared/_default.cshtml";
 }
 
 <link rel="stylesheet" type="text/css" href="~/CSS/LayOut.css">
@@ -16,27 +16,21 @@
     <title>Single</title>
 </head>
 <body>
-    
+
     <main>
-        
-        <img src="~/Images/@Model.ImageUrl" alt="Alternate Text" /><br/>
+
+        <img src="~/Images/@Model.ImageUrl" alt="Alternate Text" /><br />
         <h3>@Model.Title</h3>
         <p>@Model.Description</p><br />
         @foreach (var review in Model.Reviews)
         {
-            
+
             <p>@review.Content</p>
             <br />
             <a href="/Review/DeleteReview/@review.ReviewId">Delete Review</a>
-            
+
         }
         <a href="/Review/CreateReview/@Model.MovieId">Create Review</a>
     </main>
-    
-    <nav>
-        <a href="/">Home</a>
-        <a href="/Movie/AllMovies">Movies</a>
-    </nav>
-    <footer> Copyright 2019</footer>
 </body>
 </html>

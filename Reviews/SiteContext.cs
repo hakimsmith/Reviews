@@ -144,17 +144,20 @@ namespace Reviews
                new Genre
                {
                    GenreId = 1,
+                   ImageUrl = "SciFi.jpg",
                    GenreName = "Sci Fi"
 
                },
                new Genre
                {
                    GenreId = 2,
+                   ImageUrl = "Slasher.jpg",
                    GenreName = "Slasher"
                },
                new Genre
                {
                    GenreId = 3,
+                   ImageUrl = "Supernatural.jpg",
                    GenreName = "Supernatural"
                }
                

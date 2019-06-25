@@ -16,25 +16,11 @@ namespace Reviews.Controllers
             this.revrepos = revrepos;
         }
 
-        public ViewResult Index()
-        {
-            var model = revrepos.GetAll();
-            return View(model);
-        }
-
-
-
         public ActionResult SingleReview(int id)
         {
             var model = revrepos.GetById(id);
             return View(model);
         }
-
-        public IActionResult OnGetPartial() =>new PartialViewResult
-        {
-            ViewName = "SingleMovieReviews",
-            ViewData = ViewData,
-        };
 
         //Create Review
         [HttpGet]
