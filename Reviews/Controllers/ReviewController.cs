@@ -51,17 +51,17 @@ namespace Reviews.Controllers
         }
 
         [HttpGet]
+        public ViewResult DeleteReview(int id)
+        {
+            ViewBag.ReviewId= id;
+            return View();
+        }
+
+        [HttpPost]
         public ActionResult DeleteReview(Review review)
         {
             revrepos.Delete(review);
             return RedirectToAction("AllMovies", "Movie");
         }
-
-        //[HttpDelete]
-        //public ActionResult DeleteReview(Review review)
-        //{
-        //    revrepos.Delete(review);
-        //    return RedirectToAction("AllMovies", "Movie");
-        //}
     }
 }
