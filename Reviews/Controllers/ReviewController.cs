@@ -36,6 +36,7 @@ namespace Reviews.Controllers
             ViewData = ViewData,
         };
 
+        //Create Review
         [HttpGet]
         public ViewResult CreateReview(int id)
         {
@@ -50,6 +51,7 @@ namespace Reviews.Controllers
             return RedirectToAction("AllMovies", "Movie");
         }
 
+        //Delete Review
         [HttpGet]
         public ViewResult DeleteReview(int id)
         {
