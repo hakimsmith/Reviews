@@ -20,6 +20,11 @@ namespace Reviews.Repositories
             throw new NotImplementedException();
         }
 
+        public void Delete(Genre obj)
+        {
+            throw new NotImplementedException();
+        }
+
         public IEnumerable<Genre> GetAll()
         {
             return db.Genres;

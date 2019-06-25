@@ -49,5 +49,19 @@ namespace Reviews.Controllers
             revrepos.Create(review);
             return RedirectToAction("AllMovies", "Movie");
         }
+
+        [HttpGet]
+        public ActionResult DeleteReview(Review review)
+        {
+            revrepos.Delete(review);
+            return RedirectToAction("AllMovies", "Movie");
+        }
+
+        //[HttpDelete]
+        //public ActionResult DeleteReview(Review review)
+        //{
+        //    revrepos.Delete(review);
+        //    return RedirectToAction("AllMovies", "Movie");
+        //}
     }
 }
