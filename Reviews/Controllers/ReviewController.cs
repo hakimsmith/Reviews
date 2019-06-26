@@ -65,7 +65,7 @@ namespace Reviews.Controllers
         {
             revrepos.Edit(review);
                
-            return RedirectToAction("SingleMovie", "Movie", "review.MovieId");
+            return RedirectToAction("../Movie/SingleMovie/"+review.MovieId);
         }
     }
 }
