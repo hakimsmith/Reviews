@@ -12,15 +12,29 @@ h1 {
     text-align: center;
     font-size: 5rem;
     font-weight: bold;
-    padding: 3rem 0 0 0;
+    padding: 5rem 0 0 0;
     color: white;
-    margin-bottom: 100px;
+    margin-bottom: 20px;
+    font-family: 'Condiment', cursive;
+}
+
+h2 {
+    font-family: 'Playfair Display SC', serif;
+    color: white;
+    font-size: 15pt;
+    text-align: center
+}
+h3 {
+    font-family: 'Playfair Display SC', serif;
+    color: white;
+    font-size: 13pt;
+    text-align: center;
 }
 
 main a {
     font-size: 2em;
     padding: .5em 2em;
-    text-decoration: none;
+    text-decoration:   none;
     display: inline-grid;
     justify-content: center;
     align-items: center;
@@ -29,9 +43,16 @@ main a {
     color: white;
 }
 
+p {
+    font-family: 'Quicksand', sans-serif;
+    font-size: medium;
+}
+
 img {
-    width: 150px;
-    height: 250px;
+    width: 200px;
+    height: 300px;
+    display: inline;
+    padding-top: .8em;
 }
 
 footer {
@@ -48,4 +69,23 @@ footer {
 
 p {
     color: white;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+}
+
+nav a {
+        padding: .5em 2em;
+        color: white;
+}
+
+nav a:hover {
+        background: grey;
 }

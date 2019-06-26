@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using Reviews.Model;
+using Reviews.Repositories;
 
 namespace Reviews
 {
@@ -16,6 +18,10 @@ namespace Reviews
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddDbContext<SiteContext>();
+            services.AddScoped<IRepository<Genre>, GenreRepository>();
+            services.AddScoped<IRepository<Movie>, MovieRepository>();
+            services.AddScoped<IRepository<Review>, ReviewRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -32,7 +38,7 @@ namespace Reviews
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Review}/{action=Index}/{id?}");
+                    template: "{controller=Genre}/{action=AllGenres}/{id?}");
             });
         }
     }

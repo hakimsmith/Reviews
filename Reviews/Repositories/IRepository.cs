@@ -9,5 +9,8 @@ namespace Reviews.Repositories
     {
         IEnumerable<T> GetAll();
         T GetById(int id);
+        void Create(T obj);
+        void Delete(T obj);
+        //void Edit(T obj);
     }
 }

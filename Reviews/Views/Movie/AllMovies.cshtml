@@ -1,9 +1,11 @@
-﻿@model IEnumerable<Reviews.Model.HorrorReviews>
+﻿@model IEnumerable<Reviews.Model.Movie>
 
 @{
-    Layout = null;
+    Layout = "/Views/Shared/_default.cshtml";
 }
 <link rel="stylesheet" type="text/css" href="~/CSS/LayOut.css">
+
+<link href="https://fonts.googleapis.com/css?family=Condiment|Playfair+Display+SC|Quicksand&display=swap" rel="stylesheet">
 
 <!DOCTYPE html>
 
@@ -13,19 +15,18 @@
     <title>Index</title>
 </head>
 <body>
-    <nav>
+    <div>
         <h1> Horrific Reviews</h1>
-    </nav>
+    </div>
     <main>
         @foreach (var item in Model)
         {
-            <a href="Review/Single/@item.MovieId">
+
+            <a href="/Movie/SingleMovie/@item.MovieId">
                 <img src="~/Images/@item.ImageUrl" alt="Alternate Text" />
-                <p>@item.Title</p>
+                <h3>@item.Title</h3>
             </a>
         }
     </main>
-    <footer> Copyright 2019</footer>
-    <nav></nav>
 </body>
 </html>
