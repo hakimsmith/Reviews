@@ -25,6 +25,12 @@ namespace Reviews.Repositories
             throw new NotImplementedException();
         }
 
+        public void Edit(Movie obj)
+        {
+            throw new NotImplementedException();
+        }
+
+
         public IEnumerable<Movie> GetAll()
         {
             return db.Movies;

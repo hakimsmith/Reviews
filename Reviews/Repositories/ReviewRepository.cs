@@ -36,5 +36,18 @@ namespace Reviews.Repositories
             db.Reviews.Remove(review);
             db.SaveChanges();
         }
+
+        public void Edit(Review review)
+        {
+            using (var db = new SiteContext())
+            {
+                var result = db.Reviews.SingleOrDefault(r => r.ReviewId == review.ReviewId);
+                if (result != null)
+                {
+                    result.Content = review.Content;
+                    db.SaveChanges();
+                }
+            }
+        }
     }
 }

@@ -11,6 +11,6 @@ namespace Reviews.Repositories
         T GetById(int id);
         void Create(T obj);
         void Delete(T obj);
-        //void Edit(T obj);
+        void Edit(T obj);
     }
 }

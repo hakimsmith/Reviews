@@ -51,5 +51,20 @@ namespace Reviews.Controllers
             revrepos.Delete(review);
             return RedirectToAction("AllMovies", "Movie");
         }
+        [HttpGet]
+        public ActionResult EditReview(int id)
+        {
+          
+            ViewBag.ReviewId = id;
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult EditReview(Review review)
+        {
+            revrepos.Edit(review);
+               
+            return RedirectToAction("AllMovies", "Movie");
+        }
     }
 }
