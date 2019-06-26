@@ -21,14 +21,14 @@
         <div class="col-md-4">
             <form asp-action="EditReview">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                <input type="hidden" value="@ViewBag.ReviewId" asp-for="ReviewId" />
+                <input type="hidden" value="@Model.ReviewId" asp-for="ReviewId" />
                 <div class="form-group">
                     <label asp-for="Content" class="control-label"></label>
                     <input asp-for="Content" class="form-control" />
                     <span asp-validation-for="Content" class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    <input asp-for="MovieId" type="hidden" value="@ViewBag.MovieId" class="form-control" />
+                    <input asp-for="MovieId" type="hidden" value="@Model.MovieId" class="form-control" />
                 </div>
                 <div class="form-group">
                     <input type="submit" value="Save" class="btn btn-default" />

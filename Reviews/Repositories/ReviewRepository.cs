@@ -39,15 +39,18 @@ namespace Reviews.Repositories
 
         public void Edit(Review review)
         {
-            using (var db = new SiteContext())
-            {
-                var result = db.Reviews.SingleOrDefault( r => r.ReviewId == review.ReviewId);
-                if (result != null)
-                {
-                    result.Content = review.Content;
-                    db.SaveChanges();
-                }
-            }
+           
+            db.Update(review);
+            db.SaveChanges();
+            //using (var db = new SiteContext())
+            //{
+            //    var result = db.Reviews.SingleOrDefault( r => r.ReviewId == review.ReviewId);
+            //    if (result != null)
+            //    {
+            //        result.Content = review.Content;
+            //        db.SaveChanges();
+            //    }
+            //}
         }
     }
 }

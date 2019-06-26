@@ -52,11 +52,12 @@ namespace Reviews.Controllers
             return RedirectToAction("AllMovies", "Movie");
         }
         [HttpGet]
-        public ActionResult EditReview(int id)
+        public ViewResult EditReview(int id)
         {
-          
-            ViewBag.ReviewId = id;
-            return View();
+            //ViewBag.MovieId = review.MovieId;
+            //ViewBag.ReviewId = review.ReviewId;
+            var model = revrepos.GetById(id);
+            return View(model);
         }
 
         [HttpPost]
@@ -64,7 +65,7 @@ namespace Reviews.Controllers
         {
             revrepos.Edit(review);
                
-            return RedirectToAction("AllMovies", "Movie");
+            return RedirectToAction("SingleMovie", "Movie", "review.MovieId");
         }
     }
 }
