@@ -31,6 +31,11 @@ namespace Reviews.Controllers
             return RedirectToAction("../Movie/SingleMovie/" + review.MovieId);
         }
 
+        public object SingleReview()
+        {
+            throw new NotImplementedException();
+        }
+
         //Delete Review
         [HttpGet]
         public ViewResult DeleteReview(int id)

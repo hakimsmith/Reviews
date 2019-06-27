@@ -1,32 +1,34 @@
 using Microsoft.AspNetCore.Mvc;
-using Reviews.Controllers;
 using System;
 using Xunit;
+using NSubstitute;
+using Reviews.Repositories;
+using Reviews.Model;
+using System.Collections.Generic;
+using Reviews.Controllers;
 
 namespace Reviews.Tests
 {
     
-        public class ReviewControllerTests
+        public class MovieControllerTests
         {
-            //[Fact]
-            //public void Index_Returns_View()
-            //{
-            //        var underTest = new MovieController();
+            MovieController underTest;
+            IRepository<Movie> revRepo;
+            
+            public MovieControllerTests()
+        {
+            revRepo = Substitute.For<IRepository<Movie>>();
+            underTest = new MovieController(revRepo);
+        }
 
-            //        var result = underTest.Index();
+        [Fact]
+        public void AllMovies_Returns_A_View()
+        {
+            var result = underTest.AllMovies();
 
-            //        Assert.IsType<ViewResult>(result);
-            //}
+            Assert.IsType<ViewResult>(result);
+        }
 
-            //[Fact]
-            //public void Single_Returns_A_View()
-            //{
-            //        var underTest = new ReviewController();
-
-            //        var result = underTest.Single();
-
-            //        Assert.IsType<ViewResult>(result);
-            // }
         }
     
 }
