@@ -1,34 +1,40 @@
-using Microsoft.AspNetCore.Mvc;
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
 using Xunit;
 using NSubstitute;
 using Reviews.Repositories;
 using Reviews.Model;
-using System.Collections.Generic;
 using Reviews.Controllers;
-
+using Microsoft.AspNetCore.Mvc;
 namespace Reviews.Tests
 {
-    
-        public class MovieControllerTests
+    public class ReviewControllerTests
+    {
+        ReviewController underTest;
+        IRepository<Review> revRepo;
+        SiteContext db;
+
+        public ReviewControllerTests()
         {
-            MovieController underTest;
-            IRepository<Movie> revRepo;
-            
-            public MovieControllerTests()
-        {
-            revRepo = Substitute.For<IRepository<Movie>>();
-            underTest = new MovieController(revRepo);
-        }
+            revRepo = Substitute.For<IRepository<Review>>();
+            underTest = new ReviewController(revRepo);
+            db = new SiteContext();
+         }
 
         [Fact]
-        public void AllMovies_Returns_A_View()
+
+        public void Review_Is_Created_By_Create_Action()
         {
-            var result = underTest.AllMovies();
 
-            Assert.IsType<ViewResult>(result);
-        }
+            Review review = new Review();
 
+            //ReviewController underTest = new ReviewController ();
+
+            underTest.CreateReview(2);
+            var result = db.Reviews.;
+            Assert.Equals(1);
+            
         }
-    
+    }
 }

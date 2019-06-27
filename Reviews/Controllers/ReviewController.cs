@@ -11,6 +11,7 @@ namespace Reviews.Controllers
     public class ReviewController : Controller
     {
         IRepository<Review> revrepos;
+                
         public ReviewController(IRepository<Review> revrepos)
         {
             this.revrepos = revrepos;
