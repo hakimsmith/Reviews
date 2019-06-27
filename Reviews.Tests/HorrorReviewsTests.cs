@@ -17,7 +17,7 @@ namespace Reviews.Tests
 
         //    var result = underTest.ImageUrl;
 
-        //    Assert.Equal("/wwwroot/Images/BlairWitch.jpg/" , result);
+        //    Assert.Equal("/wwwroot/Images/BlairWitch.jpg/", result);
         //}
     }
 }
