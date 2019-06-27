@@ -14,24 +14,24 @@
 <body>
 
     <main>
-        <img src="~/Images/@Model.ImageUrl" alt="Alternate Text" />
 
-    <br />
+        <img src="~/Images/@Model.ImageUrl" alt="Alternate Text" /><br />
         <h3>@Model.Title</h3>
-        <p>@Model.Description</p>
-    <br />
-        <a href="/Review/CreateReview/@Model.MovieId">Create Review</a>
-        <br />
-        <br />
-
+        <p>@Model.Description</p><br />
         @foreach (var review in Model.Reviews)
         {
-            <p>@review.Content</p>
-            <br />
+            <div>
+                <p>@review.Content</p>
+                <br />
 
-            <a href="/Review/DeleteReview/@review.ReviewId">Delete Review</a>
-            <a href="/Review/EditReview/@review.ReviewId">Edit Review</a>
+                <a href="/Review/DeleteReview/@review.ReviewId">Delete Review</a>
+
+                <a href="/Review/EditReview/@review.ReviewId">Edit Review</a>
+            </div>
         }
+        <div>
+        <a href="/Review/CreateReview/@Model.MovieId">Create Review</a>
+        </div>
 
 
     </main>

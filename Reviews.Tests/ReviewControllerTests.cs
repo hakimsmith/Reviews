@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Reviews.Controllers;
 using System;
 using Xunit;
+using NSubstitute;
 
 namespace Reviews.Tests
 {
