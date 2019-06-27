@@ -1,4 +1,4 @@
-# Horrific Reviews - A website dedicated to the world of horror movie criticism!
+# Horrific Reviews - A website dedicated to horror movie criticism!
 
 ## Navigation Bar
 Most pages display a navigation bar that gives the user the ability to navigate to one of two pages: The main menu ("Home") or the list of all movies ("Movies").
