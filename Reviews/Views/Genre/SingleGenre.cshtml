@@ -1,0 +1,35 @@
+﻿@model Reviews.Model.Genre
+@{
+    Layout = "/Views/Shared/_default.cshtml";
+}
+<link rel="stylesheet" type="text/css" href="~/CSS/LayOut.css">
+
+<link href="https://fonts.googleapis.com/css?family=Condiment|Playfair+Display+SC|Quicksand&display=swap" rel="stylesheet">
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SingleGenre</title>
+</head>
+<body>
+    <section id=" home"></section>
+    <header>
+        <h1>@Model.GenreName</h1>
+    </header>
+    <main>
+
+        @foreach (var item in Model.Movies)
+        {
+            <a href="/Movie/SingleMovie/@item.MovieId">
+
+                <img src="~/Images/@item.ImageUrl" alt="Alternate Text" />
+                <h3>@item.Title</h3>
+
+            </a>
+        }
+
+    </main>
+</body>
+</html>

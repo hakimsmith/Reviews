@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Reviews.Model.Genre>
+@{
+    Layout = "/Views/Shared/_default.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AllGenres</title>
+</head>
+<body>
+    <h1>Genres</h1>
+    <main>
+
+        @foreach (var item in Model)
+        {
+            <a href="Genre/SingleGenre/@item.GenreId">
+
+                <img src="~/Images/@item.ImageUrl" alt="Alternate Text" />
+                <h2>@item.GenreName</h2>
+
+            </a>
+        }
+
+    </main>
+</body>
+</html>

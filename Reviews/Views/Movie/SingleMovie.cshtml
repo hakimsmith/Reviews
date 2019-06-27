@@ -1,0 +1,43 @@
+﻿@model Reviews.Model.Movie
+
+@{
+    Layout = "/Views/Shared/_default.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Single</title>
+</head>
+<body>
+    <br />
+    <h1>@Model.Title</h1>
+    
+    <div class="infobox">
+        <img src="~/Images/@Model.ImageUrl" alt="Alternate Text" /><br />
+        <p>@Model.Description</p><br />
+        <br />
+    </div>
+    <h2>Reviews</h2>
+    <main class="reviewbox">
+        <div>
+            <a href="/Review/CreateReview/@Model.MovieId">Create Review</a>
+            <br />
+        </div>
+
+        @foreach (var review in Model.Reviews)
+        {
+            <div>
+              
+                <p>@review.Content</p>
+                <a href="/Review/EditReview/@review.ReviewId">Edit Review</a>
+                <a href="/Review/DeleteReview/@review.ReviewId">Delete Review</a>
+                <br />
+            </div>
+            <br />
+        }               
+    </main>
+</body>
+</html>

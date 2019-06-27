@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Reviews.Model.Movie>
+
+@{
+    Layout = "/Views/Shared/_default.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <h1> Horrific Reviews</h1>
+    </div>
+    <main>
+
+        @foreach (var item in Model)
+        {
+
+            <a href="/Movie/SingleMovie/@item.MovieId">
+                <img src="~/Images/@item.ImageUrl" alt="Alternate Text" />
+                <h3>@item.Title</h3>
+            </a>
+        }
+
+    </main>
+</body>
+</html>
