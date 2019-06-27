@@ -15,9 +15,11 @@
 </head>
 <body>
     <section id=" home"></section>
+    <header>
+        <h1>@Model.GenreName</h1>
+    </header>
     <main>
 
-        <p>@Model.GenreName</p><br />
         @foreach (var item in Model.Movies)
         {
             <a href="/Movie/SingleMovie/@item.MovieId">
