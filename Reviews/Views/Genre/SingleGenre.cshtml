@@ -16,21 +16,18 @@
 <body>
     <section id=" home"></section>
     <main>
-        @*<img src="~/Images/@Model.ImageUrl" alt="Alternate Text" />*@
 
         <p>@Model.GenreName</p><br />
         @foreach (var item in Model.Movies)
         {
-
             <a href="/Movie/SingleMovie/@item.MovieId">
 
                 <img src="~/Images/@item.ImageUrl" alt="Alternate Text" />
                 <h3>@item.Title</h3>
 
             </a>
-
         }
-        @*<p>@Model.RevRepo.GetById(Model.MovieId)</p>*@
+
     </main>
 </body>
 </html>

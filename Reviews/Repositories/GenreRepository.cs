@@ -26,7 +26,7 @@ namespace Reviews.Repositories
         }
 
 
-
+        //unused
         public void Create(Genre obj)
         {
             throw new NotImplementedException();
