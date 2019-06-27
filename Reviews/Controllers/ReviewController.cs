@@ -11,15 +11,10 @@ namespace Reviews.Controllers
     public class ReviewController : Controller
     {
         IRepository<Review> revrepos;
+                
         public ReviewController(IRepository<Review> revrepos)
         {
             this.revrepos = revrepos;
-        }
-
-        public ActionResult SingleReview(int id)
-        {
-            var model = revrepos.GetById(id);
-            return View(model);
         }
 
         //Create Review
@@ -34,7 +29,12 @@ namespace Reviews.Controllers
         public ActionResult CreateReview(Review review)
         {
             revrepos.Create(review);
-            return RedirectToAction("AllMovies", "Movie");
+            return RedirectToAction("../Movie/SingleMovie/" + review.MovieId);
+        }
+
+        public object SingleReview()
+        {
+            throw new NotImplementedException();
         }
 
         //Delete Review
@@ -49,13 +49,13 @@ namespace Reviews.Controllers
         public ActionResult DeleteReview(Review review)
         {
             revrepos.Delete(review);
-            return RedirectToAction("AllMovies", "Movie");
+            return RedirectToAction("../Movie/SingleMovie/" + review.MovieId);
         }
+
+        //Edit Review
         [HttpGet]
         public ViewResult EditReview(int id)
         {
-            //ViewBag.MovieId = review.MovieId;
-            //ViewBag.ReviewId = review.ReviewId;
             var model = revrepos.GetById(id);
             return View(model);
         }
@@ -67,5 +67,6 @@ namespace Reviews.Controllers
                
             return RedirectToAction("../Movie/SingleMovie/"+review.MovieId);
         }
+        
     }
 }

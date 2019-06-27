@@ -7,7 +7,6 @@
   <ItemGroup>
     <None Include="wwwroot\Images\BlairWitch.jpg" />
     <None Include="wwwroot\Images\Hereditary.jpg" />
-    <None Include="wwwroot\Images\Saw.jpg" />
     <None Include="wwwroot\Images\TheThing.jpg" />
   </ItemGroup>
 
@@ -22,6 +21,8 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.9" />
+    <PackageReference Include="NSubstitute" Version="4.2.0" />
+    <PackageReference Include="NSubstitute.Analyzers.CSharp" Version="1.0.10" />
   </ItemGroup>
 
 </Project>

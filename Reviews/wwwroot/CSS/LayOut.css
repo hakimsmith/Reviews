@@ -51,7 +51,6 @@ p {
 img {
     width: 200px;
     height: 300px;
-    display: inline;
     padding-top: .8em;
 }
 
@@ -65,6 +64,7 @@ footer {
     justify-content: center;
     margin-top: 100px;
     margin-bottom: 100px;
+    position: fixed;
 }
 
 p {
@@ -86,12 +86,19 @@ nav {
 nav a {
         padding: .5em 2em;
         color: white;
+        text-decoration: none;
+        font-family: 'Playfair Display SC', serif;
+        font-weight: bold;
+    }
+
+ a h2:hover, h3:hover {
+        color: darkred;    
 }
 
 nav a:hover {
-        background: grey;
+    background: #444;
+    color: darkred;
 }
-
 
 form{
     padding: 2em;
@@ -107,3 +114,28 @@ form{
 .btn btn-default{
     color: white;
 }
+
+div a  {
+    font-size: 20px;
+}
+
+div a:hover {
+    color: darkred;
+}
+
+nav img {
+    width: 40px;
+    height: 40px;
+}
+
+nav div span{
+    color: white;
+    font-family: 'Condiment', cursive;
+    font-size: 20px;
+}
+
+.push {
+    margin-left: auto;
+
+}
+

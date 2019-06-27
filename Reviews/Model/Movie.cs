@@ -17,11 +17,11 @@ namespace Reviews.Model
 
         public virtual Genre Genre { get; set; }
 
-        //public ReviewRepository RevRepo { get; set; }
-
         public virtual List<Review> Reviews { get; set; }
 
-
+        public Movie()
+        {
+        }
 
         public Movie(int movieId, int genreId, string title, string imageUrl, string description)
         {
@@ -32,9 +32,5 @@ namespace Reviews.Model
             Description = description;           
         }
 
-        public Movie()
-        {
-
-        }
     }
 }
