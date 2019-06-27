@@ -28,7 +28,7 @@ namespace Reviews.Controllers
         public ActionResult CreateReview(Review review)
         {
             revrepos.Create(review);
-            return RedirectToAction("AllMovies", "Movie");
+            return RedirectToAction("../Movie/SingleMovie/" + review.MovieId);
         }
 
         //Delete Review
@@ -43,7 +43,7 @@ namespace Reviews.Controllers
         public ActionResult DeleteReview(Review review)
         {
             revrepos.Delete(review);
-            return RedirectToAction("AllMovies", "Movie");
+            return RedirectToAction("../Movie/SingleMovie/" + review.MovieId);
         }
 
         //Edit Review
