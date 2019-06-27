@@ -14,6 +14,7 @@ namespace Reviews.Repositories
         {
             this.db = db;
         }
+
         public IEnumerable<Review> GetAll()
         {
             return db.Reviews;
@@ -24,9 +25,9 @@ namespace Reviews.Repositories
             return db.Reviews.Single(c => c.ReviewId == id);
         }
 
+        //CRUD
         public void Create(Review review)
         {
-
             db.Reviews.Add(review);
             db.SaveChanges();
         }
@@ -39,18 +40,9 @@ namespace Reviews.Repositories
 
         public void Edit(Review review)
         {
-           
             db.Update(review);
             db.SaveChanges();
-            //using (var db = new SiteContext())
-            //{
-            //    var result = db.Reviews.SingleOrDefault( r => r.ReviewId == review.ReviewId);
-            //    if (result != null)
-            //    {
-            //        result.Content = review.Content;
-            //        db.SaveChanges();
-            //    }
-            //}
         }
+
     }
 }

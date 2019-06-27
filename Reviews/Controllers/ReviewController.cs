@@ -16,12 +16,6 @@ namespace Reviews.Controllers
             this.revrepos = revrepos;
         }
 
-        public ActionResult SingleReview(int id)
-        {
-            var model = revrepos.GetById(id);
-            return View(model);
-        }
-
         //Create Review
         [HttpGet]
         public ViewResult CreateReview(int id)
@@ -51,11 +45,11 @@ namespace Reviews.Controllers
             revrepos.Delete(review);
             return RedirectToAction("AllMovies", "Movie");
         }
+
+        //Edit Review
         [HttpGet]
         public ViewResult EditReview(int id)
         {
-            //ViewBag.MovieId = review.MovieId;
-            //ViewBag.ReviewId = review.ReviewId;
             var model = revrepos.GetById(id);
             return View(model);
         }
@@ -67,5 +61,6 @@ namespace Reviews.Controllers
                
             return RedirectToAction("../Movie/SingleMovie/"+review.MovieId);
         }
+        
     }
 }

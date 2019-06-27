@@ -15,6 +15,19 @@ namespace Reviews.Repositories
             this.db = db;
         }
 
+        public IEnumerable<Movie> GetAll()
+        {
+            return db.Movies;
+        }
+
+        public Movie GetById(int id)
+        {
+            return db.Movies.Single(c => c.MovieId == id);
+
+        }
+
+
+
         public void Create(Movie obj)
         {
             throw new NotImplementedException();
@@ -29,17 +42,5 @@ namespace Reviews.Repositories
         {
             throw new NotImplementedException();
         }
-
-
-        public IEnumerable<Movie> GetAll()
-        {
-            return db.Movies;
-        }
-
-         public Movie GetById(int id)
-         {
-            return db.Movies.Single(c => c.MovieId == id);
-
-         }
     }
 }

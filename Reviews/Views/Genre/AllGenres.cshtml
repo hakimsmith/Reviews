@@ -16,8 +16,10 @@
         @foreach (var item in Model)
         {
             <a href="Genre/SingleGenre/@item.GenreId">
+
                 <img src="~/Images/@item.ImageUrl" alt="Alternate Text" />
                 <h2>@item.GenreName</h2>
+
             </a>
         }
     </main>

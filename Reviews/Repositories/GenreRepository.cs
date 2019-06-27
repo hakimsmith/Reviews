@@ -15,6 +15,18 @@ namespace Reviews.Repositories
             this.db = db;
         }
 
+        public IEnumerable<Genre> GetAll()
+        {
+            return db.Genres;
+        }
+
+        public Genre GetById(int id)
+        {
+            return db.Genres.Single(c => c.GenreId == id);
+        }
+
+
+
         public void Create(Genre obj)
         {
             throw new NotImplementedException();
@@ -29,17 +41,6 @@ namespace Reviews.Repositories
         {
             throw new NotImplementedException();
         }
-
-        public IEnumerable<Genre> GetAll()
-        {
-            return db.Genres;
-        }
-
-        public Genre GetById(int id)
-        {
-            return db.Genres.Single(c => c.GenreId == id);
-        }
-
         
     }
 }

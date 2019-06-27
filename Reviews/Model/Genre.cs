@@ -7,25 +7,21 @@ namespace Reviews.Model
 {
     public class Genre
     {
-
-        public virtual List<Movie> Movies { get; set; }
-
         public int GenreId { get; set; }
         public string ImageUrl { get; set; }
         public string GenreName { get; set; }
 
+        public virtual List<Movie> Movies { get; set; }
+
         public Genre()
         {
-
         }
-        
 
         public Genre(int genreId, string genreName)
         {
             GenreId = GenreId;
             GenreName = genreName;          
         }
-    }
 
-    
+    }
 }
