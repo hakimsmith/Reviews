@@ -30,17 +30,14 @@
         @foreach (var review in Model.Reviews)
         {
             <div>
-
+              
                 <p>@review.Content</p>
                 <a href="/Review/EditReview/@review.ReviewId">Edit Review</a>
                 <a href="/Review/DeleteReview/@review.ReviewId">Delete Review</a>
 
             </div>
             <br />
-        }
-
-
-
+        }               
     </main>
 </body>
 </html>

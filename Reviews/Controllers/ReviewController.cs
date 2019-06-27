@@ -11,6 +11,7 @@ namespace Reviews.Controllers
     public class ReviewController : Controller
     {
         IRepository<Review> revrepos;
+                
         public ReviewController(IRepository<Review> revrepos)
         {
             this.revrepos = revrepos;
@@ -29,6 +30,11 @@ namespace Reviews.Controllers
         {
             revrepos.Create(review);
             return RedirectToAction("../Movie/SingleMovie/" + review.MovieId);
+        }
+
+        public object SingleReview()
+        {
+            throw new NotImplementedException();
         }
 
         //Delete Review

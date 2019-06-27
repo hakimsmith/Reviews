@@ -24,7 +24,8 @@ namespace Reviews.Model
             ReviewId = reviewId;
             Content = content;
         }
-       
+
+        
     }
 }
 
