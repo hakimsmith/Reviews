@@ -32,7 +32,7 @@ namespace Reviews.Tests
             //ReviewController underTest = new ReviewController ();
 
             underTest.CreateReview(2);
-            var result = db.Reviews.;
+            var result = db.Reviews;
             Assert.Equals(1);
             
         }
