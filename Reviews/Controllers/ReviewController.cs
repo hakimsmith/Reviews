@@ -49,7 +49,7 @@ namespace Reviews.Controllers
         public ActionResult DeleteReview(Review review)
         {
             revrepos.Delete(review);
-            return RedirectToAction("../Movie/SingleMovie/" + review.MovieId);
+            return RedirectToAction("../Movie/AllMovies/");
         }
 
         //Edit Review

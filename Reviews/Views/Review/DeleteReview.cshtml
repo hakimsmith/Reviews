@@ -16,25 +16,21 @@
     <div>
         <h4>Review</h4>
         <hr />
-        @*<dl class="dl-horizontal">
-            <dt>
-                @Html.DisplayNameFor(model => model.Content)
-            </dt>
+        <dl class="dl-horizontal">
+            
             <dd>
                 @Html.DisplayFor(model => model.Content)
             </dd>
-            <dt>
-                @Html.DisplayNameFor(model => model.ReviewMovie)
-            </dt>
+            
             <dd>
                 @Html.DisplayFor(model => model.ReviewMovie.MovieId)
             </dd>
-        </dl>*@
+        </dl>
 
         <form asp-action="DeleteReview">
             <input type="hidden" value="@ViewBag.ReviewId" asp-for="ReviewId" />
             <input type="submit" value="Delete" class="btn btn-default" /> |
-            <a asp-controller="Movie" asp-action="SingleMovie">Back to Movie Page</a>
+            <a asp-controller="Movie" asp-action="AllMovies">Back to Movie Page</a>
         </form>
     </div>
 </body>
