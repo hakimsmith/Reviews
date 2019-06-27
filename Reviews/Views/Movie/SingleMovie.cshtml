@@ -12,28 +12,32 @@
     <title>Single</title>
 </head>
 <body>
-
-    <main>
-
+    <br />
+    <h1>@Model.Title</h1>
+    
+    <div class="infobox">
         <img src="~/Images/@Model.ImageUrl" alt="Alternate Text" /><br />
-        <h3>@Model.Title</h3>
         <p>@Model.Description</p><br />
+        <br />
+    </div>
+    <h2>Reviews</h2>
+    <main class="reviewbox">
+        <div>
+            <a href="/Review/CreateReview/@Model.MovieId">Create Review</a>
+            <br />
+        </div>
+
         @foreach (var review in Model.Reviews)
         {
             <div>
+              
                 <p>@review.Content</p>
-                <br />
-
+                <a href="/Review/EditReview/@review.ReviewId">Edit Review</a>
                 <a href="/Review/DeleteReview/@review.ReviewId">Delete Review</a>
 
-                <a href="/Review/EditReview/@review.ReviewId">Edit Review</a>
             </div>
-        }
-        <div>
-        <a href="/Review/CreateReview/@Model.MovieId">Create Review</a>
-        </div>
-
-
+            <br />
+        }               
     </main>
 </body>
 </html>

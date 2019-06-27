@@ -11,8 +11,9 @@
     <title>AllGenres</title>
 </head>
 <body>
-    <h1>Horrific Genres</h1>
+    <h1>Genres</h1>
     <main>
+
         @foreach (var item in Model)
         {
             <a href="Genre/SingleGenre/@item.GenreId">
@@ -22,6 +23,7 @@
 
             </a>
         }
+
     </main>
 </body>
 </html>

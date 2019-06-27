@@ -157,7 +157,7 @@ namespace Reviews
                new Genre
                {
                    GenreId = 3,
-                   ImageUrl = "Supernatural.jpg",
+                   ImageUrl = "Supernatural.png",
                    GenreName = "Supernatural"
                }
                
